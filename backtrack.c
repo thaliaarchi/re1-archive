@@ -72,7 +72,9 @@ backtrack(Prog *prog, char *input, char **subp, int nsubp)
 				pc = pc->x;	/* continue current thread */
 				continue;
 			case Save:
-				sub = update(sub, pc->n, sp);
+				if(pc->n < nsubp) {
+					sub = update(sub, pc->n, sp);
+				}
 				pc++;
 				continue;
 			}
