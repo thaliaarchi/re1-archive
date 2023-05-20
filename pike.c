@@ -80,7 +80,6 @@ pikevm(Prog *prog, char *input, char **subp, int nsubp)
 	
 	gen++;
 	addthread(clist, thread(prog->start, sub), input);
-	matched = 0;
 	for(sp=input;; sp++) {
 		if(clist->n == 0)
 			break;

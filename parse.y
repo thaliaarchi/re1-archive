@@ -98,6 +98,11 @@ single:
 		$$ = reg(Lit, nil, nil);
 		$$->ch = $1;
 	}
+| ':'
+	{
+		$$ = reg(Lit, nil, nil);
+		$$->ch = ':';
+	}
 |	'.'
 	{
 		$$ = reg(Dot, nil, nil);
